@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = 'secrit-info'>My secrit info</h1>
+    <input id = 'delete-comfirm' type="text" placeholder="Place type delete">
+    <button id = 'btn-delete' disabled>Delete</button>
+
+    <script>
+        document.getElementById('delete-comfirm').addEventListener('keyup',function(event){
+            const text = event.target.value;
+            const deletebutton = document.getElementById('btn-delete');
+            if(text === 'delete'){
+                deletebutton.removeAttribute('disabled');
+            }else{
+                deletebutton.setAttribute('disabled',true)
+            }
+        })
+
+
+        document.getElementById('btn-delete').addEventListener('click',function(){
+            const secrit = document.getElementById('secrit-info');
+            secrit.style.display = 'none';
+        })
+    </script>
+</body>
+</html>
