@@ -10,8 +10,18 @@
     <h1 onclick = 'console.log("he is a deliered dom")'>DOM er ajke special events</h1>
     <button onclick = 'console.log(90)'>click me</button>
     <button onclick = 'console.log(80)'>another button</button>
-
-
+    <br>
+    <button onclick = "document.body.style.backgroundColor='yellow'">click yellow</button>
+    <button onclick = clickRed()>click red</button>
+    <button id = make-blue>make blue</button>
+    <button id = make-purple>make purple</button>
+    
     <script src="js/events.js"></script>
+    <script>
+      const makePurpleButton = document.getElementById('make-purple');
+      makePurpleButton.onclick = function makePurple(){
+        document.body.style.backgroundColor='purple';
+      }
+    </script>
 </body>
 </html>
